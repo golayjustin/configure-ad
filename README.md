@@ -177,61 +177,65 @@ Login to Client-1 (Remote Desktop) as the original local admin (labuser) and joi
 <br />
 
 <p>
-20.Login to the Domain Controller with Remote Desktop and verify Client-1 shows p in Active Directory Users and Computers (ADUC) inside the "Computers" container on the root of the domain.
+Login to the Domain Controller with Remote Desktop and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the "Computers" container on the root of the domain.
 </p>
 <p>
 <img height="80%" width="80%" alt="Client-1 is present" src="">
 </p>
 <br />
 
-
-
-
-
-
-
-
-
+<h1></h1>
 
 <h3>Set up remote desktop for non-administrative users on client</h3>
+
+<p>
+Log into Client-1 as mydomain.com\jane_admin and open system properties. Click "Remote Desktop". Allow "domain users" access to remote desktop. Now Client-1 can be logged into as a normal user.
+</p>
+<p>
+<img height="80%" width="80%" alt="Allow domain users access to remote desktop" src="">
+</p>
+<br />
+
+<h1></h1>
+
 <h3>Create additional users and log into the client</h3>
 
-
 <p>
-Log into osTicket to view the tickets.
+Login to DC-1 as jane_admin.
 </p>
 <p>
-<img height="80%" width="80%" alt="Tickets from agent login" src="">
-</p>
-<br />
-
-
-
-
-
-
-
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img height="80%" width="80%" alt="Login as jane_admin" src="">
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Open PowerShell_ise as an administrator.
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img height="80%" width="80%" alt="PowerShell_ise as an administrator" src="">
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Create a new file and paste the user-creation script into it. Run the script to create the accounts.
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img height="80%" width="80%" alt="Paste the script" src="">
+</p>
+<br />
+
+<p>
+Open ADUC and observe the accounts in the appropriate OU.
+</p>
+<p>
+<img height="80%" width="80%" alt="Accounts in ADUC" src="">
+</p>
+<br />
+
+<p>
+Attempt to log into Client-1 with one of the accounts.
+</p>
+<p>
+<img height="80%" width="80%" alt="Log in with a script-created account" src="">
 </p>
 <br />
